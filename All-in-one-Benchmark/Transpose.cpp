@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define LOOP_COUNT 5000
 #define ACCELERATION_LOOP_COUNT 10
-#include "Runge-Kutt.h"
+#include "Transpose.h"
 #include<iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,12 +11,12 @@
 using namespace std;
 using namespace chrono;
 
-std::string RungeKutt::name() const {
+std::string Transpose::name() const {
     return "Benchmark based on the Transpose Intel One API method";
 }
 
 
-void RungeKutt::run() {
+void Transpose::run() {
     std::cout << "Running custom benchmark..." << std::endl;
     // Установка максимального числа потоков
     int num_procs = omp_get_num_procs();
