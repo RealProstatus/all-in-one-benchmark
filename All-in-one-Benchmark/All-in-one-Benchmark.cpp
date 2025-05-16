@@ -2,6 +2,8 @@
 //
 
 #include <iostream>
+#include "Runge-Kutt.h"
+#include "Stencil.h"
 
 int main()
 {

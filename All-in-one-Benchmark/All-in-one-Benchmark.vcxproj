@@ -42,13 +42,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>Intel C++ Compiler 2025</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <UseInteloneMKL>No</UseInteloneMKL>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>Intel C++ Compiler 2025</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -104,6 +105,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <OptimizationDiagnosticLevel>Disable</OptimizationDiagnosticLevel>
+      <OpenMP>None</OpenMP>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -118,6 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <OpenMP>GenerateParallelCode</OpenMP>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,10 +133,19 @@
   <ItemGroup>
     <ClCompile Include="All-in-one-Benchmark.cpp" />
     <ClCompile Include="Transpose.cpp" />
+    <ClCompile Include="Runge-Kutt.cpp" />
+    <ClCompile Include="Stencil.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ADDIntrin.h" />
     <ClInclude Include="Benchmark.h" />
     <ClInclude Include="Transpose.h" />
+    <ClInclude Include="FMAIntrin.h" />
+    <ClInclude Include="MatrixMult.h" />
+    <ClInclude Include="Runge-Kutt.h" />
+    <ClInclude Include="ScalarADD.h" />
+    <ClInclude Include="Stencil.h" />
+    <ClInclude Include="VectorMult.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
