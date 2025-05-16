@@ -132,12 +132,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="All-in-one-Benchmark.cpp" />
+    <ClCompile Include="Transpose.cpp" />
     <ClCompile Include="Runge-Kutt.cpp" />
     <ClCompile Include="Stencil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ADDIntrin.h" />
     <ClInclude Include="Benchmark.h" />
+    <ClInclude Include="Transpose.h" />
     <ClInclude Include="FMAIntrin.h" />
     <ClInclude Include="MatrixMult.h" />
     <ClInclude Include="Runge-Kutt.h" />
