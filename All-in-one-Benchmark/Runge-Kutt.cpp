@@ -14,7 +14,7 @@ std::string RungeKutt::name() const {
 void RungeKutt::run() {
     std::cout << "Running custom benchmark..." << std::endl;
 
-    omp_set_num_threads(16);
+    omp_set_num_threads(4);
 
     const double x_max = 10000.0;
     const double d_x = 1.0e-2;
